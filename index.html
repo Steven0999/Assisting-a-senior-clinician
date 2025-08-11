@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>SECAMB — AAP Answers: Cannulation, Infusion, Airway (FAQ)</title>
+<style>
+  :root{
+    --bg:#f7f9fb;
+    --card:#ffffff;
+    --accent:#4a3f9a;
+    --text:#0f1724;
+    --muted:#475569;
+    --shadow: 0 6px 20px rgba(15,23,36,0.08);
+  }
+  body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,var(--bg),#eef2f7);
+    color:var(--text);
+    margin:0;
+    padding:32px;
+  }
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+  }
+  header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+  }
+  header h1{
+    font-size:20px;
+    margin:0;
+    color:var(--accent);
+  }
+  header p{margin:0;color:var(--muted);font-size:14px}
+  .card{
+    background:var(--card);
+    border-radius:12px;
+    padding:18px;
+    box-shadow:var(--shadow);
+    margin-bottom:12px;
+    overflow:hidden;
+  }
+  .question{
+    display:flex;
+    width:100%;
+    border:0;
+    background:transparent;
+    padding:12px 8px;
+    text-align:left;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    font-size:16px;
+    gap:12px;
+  }
+  .question:hover{background:#fbfbff;border-radius:8px}
+  .question .title{font-weight:600}
+  .chev{
+    width:36px;height:36px;border-radius:8px;display:inline-grid;place-items:center;
+    background:#f1f0ff;color:var(--accent);font-weight:700;
+  }
+  .answer{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height .32s ease, padding .28s ease;
+    padding:0 8px;
+  }
+  .answer.open{
+    padding:12px 8px 18px 8px;
+  }
+  .answer p{margin:0;color:var(--muted);line-height:1.5}
+  /* nice subtle focus */
+  .question:focus{outline:3px solid rgba(74,63,154,0.12);border-radius:8px}
+  footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+  @media (max-width:520px){
+    body{padding:18px}
+    .question{font-size:15px}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>SECAMB — Associate Ambulance Practitioner: Expanded Answers</h1>
+        <p>Collated answers for Component 18 — Cannulations, Infusion and Advanced Airway Management</p>
+      </div>
+    </header>
+
+    <!-- Template for Q/A pairs -->
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a1" id="q1">
+        <span class="title">[1.1] Purpose of advanced airway management (indications, contraindications, pros/cons)</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a1" role="region" aria-labelledby="q1">
+        <p>Advanced airway management aims to secure and maintain a patient’s airway and adequate ventilation when basic measures are insufficient. Indications include failure to protect the airway (reduced consciousness/GCS ≤8), respiratory arrest, severe hypoxia despite oxygen therapy, significant facial/neck trauma, or obstruction. Contraindications vary by technique — for example, supraglottic devices may be less suitable with high aspiration risk. Advantages include reliable oxygenation, aspiration protection with cuffed tubes, and facilitation of controlled ventilation and medication delivery. Disadvantages include the need for high skill, risk of hypoxia or trauma during attempts, and complications such as dental injury, laryngospasm or unrecognised oesophageal intubation. As an AAP you support preparation, monitoring and troubleshooting under the senior clinician’s direction.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a2" id="q2">
+        <span class="title">[1.2] Purpose of intravenous cannulation (indications, contraindications, pros/cons)</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a2" role="region" aria-labelledby="q2">
+        <p>IV cannulation enables rapid vascular access for drugs, fluids and blood sampling. Indications include immediate medication delivery, fluid resuscitation, and diagnostics. Contraindications include local infection, burns, lymphoedema, or known thrombosed veins; in some circumstances IO may be preferred. Advantages are controlled, titratable therapy and blood sampling; disadvantages include difficulty when veins have collapsed, and risks of extravasation, phlebitis or infection. As an AAP you typically prepare equipment, select a suitable site, perform the procedure within your local scope or assist a senior clinician, ensure proper securing and labelling, monitor for complications and escalate if access cannot be safely obtained.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a3" id="q3">
+        <span class="title">[1.3] Purpose of intraosseous access (indications, contraindications, pros/cons)</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a3" role="region" aria-labelledby="q3">
+        <p>IO access gives fast, reliable systemic access through bone marrow when peripheral IV is unobtainable or time-critical. Indications include cardiac arrest, shocked patients with collapsed veins, severe dehydration or when immediate therapy is required. Contraindications include fracture at the insertion site, local infection or previous IO in the same bone; caution is required with certain bone diseases. Advantages are high first-pass success and rapid drug/fluid delivery; disadvantages include pain on infusion, limited dwell time and possible complications like extravasation, compartment syndrome or infection. AAPs generally prepare and assist with IO under senior supervision, then manage and monitor infusions and the limb closely.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a4" id="q4">
+        <span class="title">[1.4] Purpose of fluid infusion (indications, contraindications, pros/cons)</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a4" role="region" aria-labelledby="q4">
+        <p>Fluid infusion restores or maintains circulating volume, corrects dehydration and supports tissue perfusion. Indications include hypovolemia from bleeding, sepsis, dehydration and as a carrier for IV drugs. Contraindications/cautions relate to fluid type and comorbidities — avoid rapid large-volume boluses in patients at high risk of fluid overload (heart/renal failure). Advantages: improves preload and perfusion; disadvantages: risk of pulmonary oedema, dilutional coagulopathy with large volumes and electrolyte disturbances. As an AAP you set up infusion equipment, confirm rates with a senior clinician, monitor the patient and cannula site, and escalate for signs of overload, site issues, or adverse reactions.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a5" id="q5">
+        <span class="title">[2.1] Define 'senior clinician' in your role</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a5" role="region" aria-labelledby="q5">
+        <p>A senior clinician is the registered practitioner (paramedic/advanced paramedic or equivalent) with overall clinical responsibility during an incident. They assess patients, authorise advanced interventions and take final responsibility for clinical decisions. As an AAP your role is to support and work under the delegation of that clinician: preparing equipment, performing delegated tasks within scope, documenting care and escalating concerns. Understanding delegation, local SOPs and the chain of command ensures safe teamwork and effective patient care in SECAMB practice.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a6" id="q6">
+        <span class="title">[2.2] Your role in advanced airway management</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a6" role="region" aria-labelledby="q6">
+        <p>Your responsibilities include preparing airway equipment, positioning the patient, applying monitoring, assisting with ventilation (BVM) and handing instruments to the senior clinician. You confirm placement using capnography and clinical checks, secure the airway, document details, and monitor physiological response. If difficulty occurs you prepare alternative devices and clearly communicate to support the senior clinician. Work strictly within local policy and always escalate if there is concern about patient safety.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a7" id="q7">
+        <span class="title">[2.3] Your role in intravenous cannulation</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a7" role="region" aria-labelledby="q7">
+        <p>You prepare and, if competent and authorised, perform IV cannulation: confirm indication, obtain consent, choose a site, use aseptic technique to insert the cannula, secure and label it, and document the procedure. You monitor the site and the patient for complications (infiltration, infection), and if cannulation fails after agreed attempts, you escalate to the senior clinician for alternative access such as IO or further attempts as policy permits.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a8" id="q8">
+        <span class="title">[2.4] Your role in intraosseous access</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a8" role="region" aria-labelledby="q8">
+        <p>IO insertion is usually performed by the senior clinician; as an AAP you prepare the device and site, help position and stabilise the limb, provide analgesia if in scope, and hand over the correct equipment. Post-insertion you assist with flushing, securing and labelling the IO, set up infusions and closely monitor the limb for swelling or extravasation, escalating immediately for signs of complication.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a9" id="q9">
+        <span class="title">[2.5] Your role in fluid infusion</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a9" role="region" aria-labelledby="q9">
+        <p>You prepare and set up fluid infusions per senior clinician instruction: select the correct fluid, prime lines, connect and secure the cannula, calculate or programme infusion rates, and document volumes given. You monitor the patient for response (vitals, perfusion, respiratory status), watch for fluid overload or site complications, and escalate or stop the infusion if adverse signs occur. Clear documentation and handover are essential.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a10" id="q10">
+        <span class="title">[2.6] Importance of continual monitoring and reporting changes</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a10" role="region" aria-labelledby="q10">
+        <p>Continuous monitoring enables early detection of deterioration and assesses treatment response. Regularly check airway, breathing, circulation, consciousness and oxygenation, and record observations numerically. As the team member most present with the patient you must report changes promptly and clearly to the senior clinician, documenting what changed and when. Timely escalation can prevent harm; poor monitoring or delayed reporting may cause missed interventions and poorer outcomes.</p>
+      </div>
+    </div>
+
+    <footer>
+      <small>Prepared for revision and handover. Adapt these to local SECAMB SOPs and your specific competency framework.</small>
+    </footer>
+  </div>
+
+<script>
+  // Simple accessible accordion
+  document.querySelectorAll('.question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      // toggle aria-expanded
+      btn.setAttribute('aria-expanded', String(!expanded));
+      const ans = document.getElementById(btn.getAttribute('aria-controls'));
+      const chev = btn.querySelector('.chev');
+      if(!expanded){
+        // open
+        ans.classList.add('open');
+        // set max-height to scrollHeight for transition
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+        chev.textContent = '−';
+      } else {
+        // close
+        ans.style.maxHeight = '0';
+        ans.classList.remove('open');
+        chev.textContent = '+';
+      }
+    });
+
+    // keyboard support: Enter/Space handled automatically by button
+  });
+
+  // Optional: close others when one opens (accordion behavior)
+  // If you want that behavior, uncomment:
+  /*
+  document.querySelectorAll('.question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.question').forEach(function(other){
+        if(other !== btn){
+          other.setAttribute('aria-expanded','false');
+          const a = document.getElementById(other.getAttribute('aria-controls'));
+          a.style.maxHeight = '0';
+          a.classList.remove('open');
+          other.querySelector('.chev').textContent = '+';
+        }
+      });
+    });
+  });
+  */
+</script>
+</body>
+  </html>
