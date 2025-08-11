@@ -72,8 +72,9 @@
   .answer.open{
     padding:12px 8px 18px 8px;
   }
-  .answer p{margin:0;color:var(--muted);line-height:1.5}
-  /* nice subtle focus */
+  .answer p, .answer ul{margin:0;color:var(--muted);line-height:1.5}
+  .answer ul{padding-left:18px;margin-top:8px}
+  .answer li{margin-bottom:6px}
   .question:focus{outline:3px solid rgba(74,63,154,0.12);border-radius:8px}
   footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
   @media (max-width:520px){
@@ -91,7 +92,29 @@
       </div>
     </header>
 
-    <!-- Template for Q/A pairs -->
+    <!-- Summary bullet points -->
+    <div class="card">
+      <button class="question" aria-expanded="false" aria-controls="a0" id="q0">
+        <span class="title">Key Summary Points for Component 18</span>
+        <span class="chev">+</span>
+      </button>
+      <div class="answer" id="a0" role="region" aria-labelledby="q0">
+        <ul>
+          <li>Advanced airway management is indicated when basic airway measures fail; requires preparation, monitoring, and escalation support from AAPs.</li>
+          <li>Intravenous (IV) cannulation provides rapid vascular access for drugs, fluids, and blood sampling; avoid sites with infection or trauma.</li>
+          <li>Intraosseous (IO) access is a rapid alternative when IV access fails or is impractical in time-critical cases; avoid fractured/infected bones.</li>
+          <li>Fluid infusion restores circulating volume and supports perfusion but carries risks such as overload or electrolyte imbalance.</li>
+          <li>A senior clinician is the registered practitioner responsible for final care decisions; AAPs operate under their direction.</li>
+          <li>In airway management, AAPs prepare equipment, assist during the procedure, confirm placement, secure devices, and document accurately.</li>
+          <li>In cannulation, AAPs prepare kit, perform or assist within scope, secure cannulae, monitor for complications, and document.</li>
+          <li>For IO access, AAPs prepare equipment, assist insertion, flush, secure, label, and monitor for complications.</li>
+          <li>For fluid infusion, AAPs check and prepare fluids, prime lines, set up infusions, monitor response, and escalate issues promptly.</li>
+          <li>Continuous monitoring and timely reporting of changes in patient condition is critical for safe and effective care delivery.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Q/A cards -->
     <div class="card">
       <button class="question" aria-expanded="false" aria-controls="a1" id="q1">
         <span class="title">[1.1] Purpose of advanced airway management (indications, contraindications, pros/cons)</span>
@@ -198,48 +221,23 @@
   </div>
 
 <script>
-  // Simple accessible accordion
   document.querySelectorAll('.question').forEach(function(btn){
     btn.addEventListener('click', function(){
       const expanded = btn.getAttribute('aria-expanded') === 'true';
-      // toggle aria-expanded
       btn.setAttribute('aria-expanded', String(!expanded));
       const ans = document.getElementById(btn.getAttribute('aria-controls'));
       const chev = btn.querySelector('.chev');
       if(!expanded){
-        // open
         ans.classList.add('open');
-        // set max-height to scrollHeight for transition
         ans.style.maxHeight = ans.scrollHeight + 'px';
         chev.textContent = '−';
       } else {
-        // close
         ans.style.maxHeight = '0';
         ans.classList.remove('open');
         chev.textContent = '+';
       }
     });
-
-    // keyboard support: Enter/Space handled automatically by button
   });
-
-  // Optional: close others when one opens (accordion behavior)
-  // If you want that behavior, uncomment:
-  /*
-  document.querySelectorAll('.question').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.question').forEach(function(other){
-        if(other !== btn){
-          other.setAttribute('aria-expanded','false');
-          const a = document.getElementById(other.getAttribute('aria-controls'));
-          a.style.maxHeight = '0';
-          a.classList.remove('open');
-          other.querySelector('.chev').textContent = '+';
-        }
-      });
-    });
-  });
-  */
 </script>
 </body>
-  </html>
+</html>
